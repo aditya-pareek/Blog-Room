@@ -3,7 +3,7 @@
 Blog Room is a platform where users can read, write, edit blogs and comment on posts. 
        
 
-## Usage
+## Setup
 
 ```
   Clone the project locally and follow these steps:
@@ -11,7 +11,7 @@ Blog Room is a platform where users can read, write, edit blogs and comment on p
   2) source env/bin/activate
   3) pip install -r requirements.txt
   5) python manage.py runserver
-  6) Type localhost:8000 in your browser and you can now login, read, write, edit blogs and comment on posts.
+  6) Type localhost:8000 in your browser and you can now login, read, write, edit blogs and comment on posts
 ```
 ## Dependencies
 ```
