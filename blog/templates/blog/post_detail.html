@@ -27,7 +27,7 @@
             <h3>Comments: {{ post.approved_comments.count }}</h3>
             <br>
         {% endif %}
-        {% for comment in post.comments.all %}
+        {% for comment in post.comments.all reversed %}
             {% if user.is_authenticated and comment.approved_comment %}
             <div class="comment">
                 <div class="date">
