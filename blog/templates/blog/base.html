@@ -10,21 +10,18 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="{% static 'blog/main.css' %}">
-    <link rel="shortcut icon" href="{% static 'images/favicon.ico' type='image/x-icon' %}">
+    <link rel="stylesheet" href="{% static 'blog/CSS/main.css' %}">
+    <link rel="shortcut icon" href="{% static 'blog/Images/favicon-1.png' type='image/x-icon' %}">
 
-    {% if title %}
-    <title>Blog Room - {{ title }}</title>
-    {% else %}
     <title>Blog Room</title>
-    {% endif %}
+
 </head>
 
 <body>
     <header class="site-header">
         <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
             <div class="container">
-                <a class="navbar-brand mr-4" href="{% url 'blog-home' %}">Blog Room</a>
+                <a class="navbar-brand mr-4" href="{% url 'blog-index' %}">Blog Room</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle"
                     aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -42,7 +39,7 @@
                             <a class="nav-item nav-link" href="{% url 'logout' %}">Logout</a>
                         {% else %}
                             <a class="nav-item nav-link" href="{% url 'login' %}">Login</a>
-                            <a class="nav-item nav-link" href="{% url 'users-register' %}">Register</a>
+                            <a class="nav-item nav-link" href="{% url 'register' %}">Register</a>
                         {% endif %}
                     </div>
                 </div>

@@ -6,6 +6,9 @@ from django.contrib.auth.decorators import login_required
 from .models import Post, Comment
 from .forms import CommentForm
 
+def index(request):
+    return render(request, 'blog/index.html')
+
 def home(request):
     context={
         'posts': Post.objects.all()

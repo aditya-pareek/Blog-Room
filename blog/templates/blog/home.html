@@ -10,9 +10,9 @@
                 </div>
                 <h2><a class="article-title" href="{% url 'post-detail' post.id %}">{{ post.title }}</a></h2>
                 <p class="article-content">{{ post.contents }}</p>
-            
-                <a href="{% url 'post-detail' pk=post.pk %}">Comments: {{ post.approved_comments.count }}</a>
-                
+                <div class="article-metadata-1">
+                    <a class="text-muted" href="{% url 'post-detail' pk=post.pk %}">Comments: {{ post.approved_comments.count }}</a>
+                </div>
             </div>
         </article>
     {% endfor %}

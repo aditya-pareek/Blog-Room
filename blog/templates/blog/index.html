@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<head>
+    <link rel="shortcut icon" href="{% static 'blog/Images/favicon-1.png'%}" type='image/x-icon'>
+	<title>Blog Room</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="{% static 'blog/CSS/style.css' %}">
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+  	<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+  	<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+	<link href="{% static 'blog/CSS/animate.css' %}" rel="stylesheet"/>
+	<link href="{% static 'blog/CSS/waypoints.css' %}" rel="stylesheet"/>
+	<script src="{% static 'blog/JS/jquery.waypoints.min.js' %}" type="text/javascript"></script>
+	<script src="{% static 'blog/JS/waypoints.js' %}" type="text/javascript"></script>
+</head>
+<body>
+    <section class="intro">
+        <div class="inner">
+            <div class="content">
+                <section class="os-animation" data-os-animation="bounceInUp" data-os-animation-delay="0s">
+                    <h1>Blog Room</h1>
+                    <h3>Blogs that Inspire</h3>
+                </section>
+                <section class="os-animation" data-os-animation="bounceInUp" data-os-animation-delay="0.1s">
+                {% if user.is_authenticated %}
+                    <a class="btn" href="{% url 'blog-home' %}">Home</a>
+                    <a class="btn" href="{% url 'logout' %}">Logout</a>
+                {% else %}
+                    <a class="btn" href="{% url 'blog-home' %}">Home</a>
+                    <a class="btn" href="{% url 'register' %}">Register</a>
+                    <a class="btn" href="{% url 'login' %}">Login</a>
+                {% endif %}
+                </section>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
